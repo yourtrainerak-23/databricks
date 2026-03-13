@@ -1,1 +1,75 @@
-{}
+{
+  "datasets": [
+    {
+      "name": "0c69638f",
+      "displayName": "forecast_daily_calendar_metric",
+      "queryLines": [
+        "SELECT * FROM samples.accuweather.forecast_daily_calendar_metric"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "b8392c29",
+      "displayName": "page1",
+      "layout": [
+        {
+          "widget": {
+            "name": "fb7fe828",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "0c69638f",
+                  "fields": [
+                    {
+                      "name": "date",
+                      "expression": "`date`"
+                    },
+                    {
+                      "name": "avg(rain_lwe_total)",
+                      "expression": "AVG(`rain_lwe_total`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "date",
+                  "scale": {
+                    "type": "temporal"
+                  }
+                },
+                "y": {
+                  "fieldName": "avg(rain_lwe_total)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 11,
+            "height": 4
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}
