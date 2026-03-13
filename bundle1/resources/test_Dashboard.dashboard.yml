@@ -1,7 +1,0 @@
-resources:
-  dashboards:
-    test_Dashboard:
-      display_name: test_Dashboard
-      file_path: ../src/test_Dashboard.lvdash.json
-      warehouse_id: 56feb42f9710d601
-      dataset_catalog: workspace
